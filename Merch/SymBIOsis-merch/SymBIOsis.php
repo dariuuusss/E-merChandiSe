@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="ACCeSS-merch.css">
+    <link rel="stylesheet" href="SymBIOsis-merch.css">
 </head>
 <body>
 
@@ -19,23 +19,23 @@
                     <img src="Essentials/astro.png" alt="College of Science Logo" height="40">
                 </div>
                 <div class="title">
-                    <h1 class="m-0 fs-4">College of Science</h1>
+                    <h1 class="m-0 fs-4">College of Science: SYMBIOSIS</h1>
                 </div>
             </div>
             <nav class="ms-auto">
                 <ul class="nav">
-                    <li class="nav-item"><a href="#" class="nav-link text-white">Home</a></li>
+                    <li class="nav-item"><a href="../../index.php" class="nav-link text-white">Home</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Merch
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="Merch/csc2.html">CSC Merch</a></li>
-                            <li><a class="dropdown-item" href="Merch/CircuITs.html">CircuITs Merch</a></li>
-                            <li><a class="dropdown-item" href="Merch/SymBIOsis.html">SymBIOsis Merch</a></li>
-                            <li><a class="dropdown-item" href="Merch/ACCeSS.html">ACCeSS Merch</a></li>
-                            <li><a class="dropdown-item" href="Merch/Storm.html">Storm Merch</a></li>
-                            <li><a class="dropdown-item" href="Merch/Chess.html">Chess Merch</a></li>
+                            <li><a class="dropdown-item" href="../CSC-merch/csc2.php">CSC Merch</a></li>
+                            <li><a class="dropdown-item" href="../CircuITs-merch/CircuITs.php">CircuITs Merch</a></li>
+                            <li><a class="dropdown-item" href="../SymBIOsis-merch/SymBIOsis.php">SymBIOsis Merch</a></li>
+                            <li><a class="dropdown-item" href="../ACCeSS-merch/ACCeSS.php">ACCeSS Merch</a></li>
+                            <li><a class="dropdown-item" href="../Storm-merch/Storm.php">Storm Merch</a></li>
+                            <li><a class="dropdown-item" href="../Chess-merch/Chess.php">Chess Merch</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">

@@ -16,7 +16,7 @@
     <header class="bg-dark text-white py-3">
         <div class="container d-flex justify-content-between align-items-center">
             <h1 class="fs-4">Admin Dashboard</h1>
-            <a href="index.html" class="btn btn-danger">Logout</a>
+            <a href="../../index.php" class="btn btn-danger" id="logout-btn" >Logout</a>
         </div>
     </header>
 
@@ -48,8 +48,8 @@
                         <td>2</td>
                         <td>Pending</td>
                         <td>
-                            <button class="btn btn-sm btn-success">Mark Completed</button>
-                            <button class="btn btn-sm btn-danger">Delete</button>
+                            <button class="btn btn-sm btn-success" id="success-btn">Mark Completed</button>
+                            <button class="btn btn-sm btn-danger" id="delete-btn">Delete</button>
                         </td>
                     </tr>
                     <tr>
@@ -60,7 +60,7 @@
                         <td>1</td>
                         <td>Completed</td>
                         <td>
-                            <button class="btn btn-sm btn-danger">Delete</button>
+                            <button class="btn btn-sm btn-danger" id="delete-btn">Delete</button>
                         </td>
                     </tr>
                 </tbody>

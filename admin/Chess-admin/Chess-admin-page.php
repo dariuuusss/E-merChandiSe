@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="Storm-admin-page.css">
+    <link rel="stylesheet" href="Chess-admin-page.css">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
                 <img src="Essentials/astro.png" alt="College of Science Logo" height="40">
             </div>
             <h1 class="fs-1">CHESS Admin Dashboard</h1>
-            <a href="../index.html" class="btn btn-danger">Logout</a>
+            <a href="../../index.php" class="btn btn-danger">Logout</a>
         </div>
     </header>
 

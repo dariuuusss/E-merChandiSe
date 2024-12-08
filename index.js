@@ -5,17 +5,19 @@ const adminCredentials = {
     chess: { email: "chess@admin.com", password: "chess123" },
     circuits: { email: "circuits@admin.com", password: "circuits123" },
     symbio: { email: "symbio@admin.com", password: "symbio123" },
-    storm: { email: "storm@admin.com", password: "storm123" }
+    storm: { email: "storm@admin.com", password: "storm123" },
+    admin: { email: "general@admin.com", password: "general123" }
 };
 
 // Folder paths that match your directory structure
 const folderPaths = {
-    access: "ACCeSS-admin/ACCeSS-admin-page.html",
-    csc: "CSC-admin/CSC-admin-page.html",
-    chess: "Chess-admin/Chess-admin-page.html",
-    circuits: "CircuiTs-admin/CircuiTs-admin-page.html",
-    symbio: "Symbio-admin/Symbio-admin-page.html",
-    storm: "Storm-admin/Storm-admin-page.html"
+    access: "ACCeSS-admin/ACCeSS-admin-page.php",
+    csc: "CSC-admin/CSC-admin-page.php",
+    chess: "Chess-admin/Chess-admin-page.php",
+    circuits: "CircuiTs-admin/CircuiTs-admin-page.php",
+    symbio: "Symbio-admin/Symbio-admin-page.php",
+    storm: "Storm-admin/Storm-admin-page.php",
+    admin: "general-admin/admin.php"
 };
 
 // Admin login button click event

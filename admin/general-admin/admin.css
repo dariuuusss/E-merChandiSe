@@ -2,7 +2,7 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    background: url('image/Home.png') no-repeat center center fixed;
+    background: url('Essentials/Home.png') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     display: flex;

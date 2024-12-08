@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="ACCeSS-merch.css">
+    <link rel="stylesheet" href="Chess-merch.css">
 </head>
 <body>
 
@@ -19,23 +19,23 @@
                     <img src="Essentials/astro.png" alt="College of Science Logo" height="40">
                 </div>
                 <div class="title">
-                    <h1 class="m-0 fs-4">College of Science</h1>
+                    <h1 class="m-0 fs-4">College of Science: CHESS</h1>
                 </div>
             </div>
             <nav class="ms-auto">
                 <ul class="nav">
-                    <li class="nav-item"><a href="#" class="nav-link text-white">Home</a></li>
+                    <li class="nav-item"><a href="../../index.php" class="nav-link text-white">Home</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Merch
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="Merch/csc2.html">CSC Merch</a></li>
-                            <li><a class="dropdown-item" href="Merch/CircuITs.html">CircuITs Merch</a></li>
-                            <li><a class="dropdown-item" href="Merch/SymBIOsis.html">SymBIOsis Merch</a></li>
-                            <li><a class="dropdown-item" href="Merch/ACCeSS.html">ACCeSS Merch</a></li>
-                            <li><a class="dropdown-item" href="Merch/Storm.html">Storm Merch</a></li>
-                            <li><a class="dropdown-item" href="Merch/Chess.html">Chess Merch</a></li>
+                            <li><a class="dropdown-item" href="../CSC-merch/csc2.php">CSC Merch</a></li>
+                            <li><a class="dropdown-item" href="../CircuITs-merch/CircuITs.php">CircuITs Merch</a></li>
+                            <li><a class="dropdown-item" href="../SymBIOsis-merch/SymBIOsis.php">SymBIOsis Merch</a></li>
+                            <li><a class="dropdown-item" href="../ACCeSS-merch/ACCeSS.php">ACCeSS Merch</a></li>
+                            <li><a class="dropdown-item" href="../Storm-merch/Storm.php">Storm Merch</a></li>
+                            <li><a class="dropdown-item" href="../Chess-merch/Chess.php">Chess Merch</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -64,19 +64,19 @@
         <div class="horizontal-grid-container">
             <!-- Product 1 -->
             <div class="grid-item" data-product-name="Globalized Tshirt" data-product-price="P285">
-                <img src="ACCeSS/ACCeSS-shirt2.jpg" alt="Product 1">
+                <img src="Chess/Chess-shirt.jpg" alt="Product 1">
                 <div class="title">Globalized Tshirt</div>
                 <div class="price">P285</div>
             </div>
             <!-- Product 2 -->
             <div class="grid-item" data-product-name="Reversible Lanyard" data-product-price="P159">
-                <img src="ACCeSS/ACCeSS-lanyard.jpg" alt="Product 2">
+                <img src="Lanyard" alt="Product 2">
                 <div class="title">Reversible Lanyard</div>
                 <div class="price">P159</div>
             </div>
             <!-- Product 3 -->
             <div class="grid-item" data-product-name="Programmer's Bag" data-product-price="P199">
-                <img src="ACCeSS/ACCeSS-bag.jpg" alt="Product 3">
+                <img src="Bag" alt="Product 3">
                 <div class="title">Programmer's Bag</div>
                 <div class="price">P199</div>
             </div>
@@ -123,7 +123,7 @@
     </div>
 
     <!-- JS -->
-    <script src="ACCeSS-merch.js"></script>
+    <script src="Chess-merch.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

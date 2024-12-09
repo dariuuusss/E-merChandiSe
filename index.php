@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="image/Essentials/astro.png">
+    <link rel="icon" type="image/x-icon" href="assets/images/Background-logo/astro.png">
     <title>College of Science</title>
 
     <!-- Bootstrap CSS -->
@@ -19,7 +19,7 @@
         <div class="container d-flex align-items-center">
             <div class="d-flex align-items-center">
                 <div class="logo me-3">
-                    <img src="image/Essentials/astro.png" alt="College of Science Logo" height="40">
+                    <img src="assets/images/Background-logo/astro.png" alt="College of Science Logo" height="40">
                 </div>
                 <div class="title">
                     <h1 class="m-0 fs-4">College of Science</h1>
@@ -35,12 +35,12 @@
                             Merch
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="Merch/CSC-merch/csc2.php">CSC Merch</a></li>
-                            <li><a class="dropdown-item" href="Merch/CircuITs-merch/CircuITs.php">CircuITs Merch</a></li>
-                            <li><a class="dropdown-item" href="Merch/SymBIOsis-merch/SymBIOsis.php">SymBIOsis Merch</a></li>
-                            <li><a class="dropdown-item" href="Merch/ACCeSS-merch/ACCeSS.php">ACCeSS Merch</a></li>
-                            <li><a class="dropdown-item" href="Merch/Storm-merch/Storm.php">Storm Merch</a></li>
-                            <li><a class="dropdown-item" href="Merch/Chess-merch/Chess.php">Chess Merch</a></li>
+                            <li><a class="dropdown-item" href="merch-files/csc2.php">CSC Merch</a></li>
+                            <li><a class="dropdown-item" href="merch-files/circuits.php">CircuITs Merch</a></li>
+                            <li><a class="dropdown-item" href="merch-files/symbiosis.php">SymBIOsis Merch</a></li>
+                            <li><a class="dropdown-item" href="merch-files/access.php">ACCeSS Merch</a></li>
+                            <li><a class="dropdown-item" href="merch-files/storm.php">Storm Merch</a></li>
+                            <li><a class="dropdown-item" href="merch-files/chess.php">Chess Merch</a></li>
                         </ul>
                     </li>
 
@@ -102,44 +102,44 @@
             <div class="row g-4 justify-content-center">
                 <!-- Individual Merchandise Items -->
                 <div class="col-md-3">
-                    <a href="Merch/Chess-merch/Chess.php" class="item">
+                    <a href="merch-files/Chess.php" class="item">
                         <div class="placeholder"></div>
-                        <img src="image/Chess/Chess-shirt.jpg" alt="Chess Shirt" class="img-fluid">
+                        <img src="assets/images/chess/Chess-shirt.jpg" alt="Chess Shirt" class="img-fluid">
                         <div class="caption">Chess Shirt</div>
                     </a>
                 </div>
                 <div class="col-md-3">
-                    <a href="Merch/CSC-merch/csc2.php" class="item">
+                    <a href="merch-files/csc2.php" class="item">
                         <div class="placeholder"></div>
-                        <img src="image/CSC/CSC-shirt.jpg" alt="CSC Shirt" class="img-fluid">
+                        <img src="assets/images/csc/CSC-shirt.jpg" alt="CSC Shirt" class="img-fluid">
                         <div class="caption">CSC Shirt</div>
                     </a>
                 </div>
                 <div class="col-md-3">
-                    <a href="Merch/CircuITs-merch/CircuITs.php" class="item">
+                    <a href="merch-files/circuITs.php" class="item">
                         <div class="placeholder"></div>
-                        <img src="image/CircuITs/Circuits-shirt.jpg" alt="Circuits Shirt" class="img-fluid">
+                        <img src="assets/images/circuits/Circuits-shirt.jpg" alt="Circuits Shirt" class="img-fluid">
                         <div class="caption">CircuITs Shirt</div>
                     </a>
                 </div>
                 <div class="col-md-3">
-                    <a href="Merch/Storm-merch/Storm.php" class="item">
+                    <a href="merch-files/Storm.php" class="item">
                         <div class="placeholder"></div>
-                        <img src="image/Storm/Storm-shirt2.jpg" alt="Storm Shirt" class="img-fluid">
+                        <img src="assets/images/Storm/Storm-shirt2.jpg" alt="Storm Shirt" class="img-fluid">
                         <div class="caption">Storm Shirt</div>
                     </a>
                 </div>
                 <div class="col-md-3">
-                    <a href="Merch/SymBIOsis-merch/SymBIOsis.php" class="item">
+                    <a href="merch-files/SymBIOsis.php" class="item">
                         <div class="placeholder"></div>
-                        <img src="image/Symbio/Symbio-lanyard.jpg" alt="Symbio Lanyard" class="img-fluid">
+                        <img src="assets/images/Symbio/Symbio-lanyard.jpg" alt="Symbio Lanyard" class="img-fluid">
                         <div class="caption">Symbio Lanyard</div>
                     </a>
                 </div>
                 <div class="col-md-3">
-                    <a href="Merch/ACCeSS-merch/ACCeSS.php" class="item">
+                    <a href="merch-files/ACCeSS.php" class="item">
                         <div class="placeholder"></div>
-                        <img src="image/ACCeSS/ACCeSS-shirt2.jpg" alt="ACCeSS Shirt" class="img-fluid">
+                        <img src="assets/images/ACCeSS/ACCeSS-shirt2.jpg" alt="ACCeSS Shirt" class="img-fluid">
                         <div class="caption">ACCeSS Shirt</div>
                     </a>
                 </div>

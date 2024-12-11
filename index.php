@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
     <!-- Header Section -->
     <header class="transparent-header text-white py-3">
         <div class="container d-flex align-items-center">

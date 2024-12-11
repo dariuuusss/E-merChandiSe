@@ -19,11 +19,11 @@
                 <input type="password" id="password" placeholder="Enter your password">
             </div>
             <div class="input-box">
-                <button type="submit">Login</button>
+                <button type="submit" id="login">Login</button>
             </div>
-            <div class="create-account">
+            <div class="input-box">
                 <p>Don't have an account yet?</p>
-            <button class="register">Create account</button>
+            <button class="register-btn" id="register">Create account</button>
         </div>
         </form>
     </div>

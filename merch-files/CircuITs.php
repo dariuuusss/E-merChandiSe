@@ -30,12 +30,12 @@
                             Merch
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="../csc2.php">CSC Merch</a></li>
-                            <li><a class="dropdown-item" href="../CircuITs.php">CircuITs Merch</a></li>
-                            <li><a class="dropdown-item" href="../SymBIOsis.php">SymBIOsis Merch</a></li>
-                            <li><a class="dropdown-item" href="../ACCeSS.php">ACCeSS Merch</a></li>
-                            <li><a class="dropdown-item" href="../Storm.php">Storm Merch</a></li>
-                            <li><a class="dropdown-item" href="../Chess.php">Chess Merch</a></li>
+                            <li><a class="dropdown-item" href="csc2.php">CSC Merch</a></li>
+                            <li><a class="dropdown-item" href="CircuITs.php">CircuITs Merch</a></li>
+                            <li><a class="dropdown-item" href="SymBIOsis.php">SymBIOsis Merch</a></li>
+                            <li><a class="dropdown-item" href="ACCeSS.php">ACCeSS Merch</a></li>
+                            <li><a class="dropdown-item" href="Storm.php">Storm Merch</a></li>
+                            <li><a class="dropdown-item" href="hess.php">Chess Merch</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">

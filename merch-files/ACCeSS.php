@@ -94,24 +94,19 @@
                 <div class="modal-body">
                     <!-- Form for purchase -->
                     <form id="purchaseForm" action="../buy.php" method="post">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                        <div class="quantity-label">
+                            <p>Quantity</p>
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                        <div class="quantity-container">
+                            <span class="minus" >&#x2212;</span>
+                            <span class="quantity" >0</span>
+                            <span class="plus" >&#x002B;</span>
                         </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="paymentMethod" class="form-label">Payment Method</label>
-                            <select class="form-select" id="paymentMethod" name="paymentMethod" required>
-                                <option value="gcash">GCash</option>
-                                <option value="cash">Cash</option>
-                            </select>
+                        <div class="sizes">
+                            <div class="sizes-label">
+                                <p>Sizes</p>
+                            </div>
+                            <span class="size">XS</span><span class="size">S</span><span class="size">M</span><span class="size">L</span><span class="size">XL</span><span class="size">XXL</span>
                         </div>
                     </form>
                 </div>
@@ -123,9 +118,27 @@
             </div>
         </div>
     </div>
-
-
     <!-- JS -->
+     <script>
+        const plus = document.querySelector(".plus"),
+            minus = document.querySelector(".minus"),
+            num = document.querySelector(".quantity");
+
+            let a = 0;
+
+            plus.addEventListener("click", () => {
+                    a++;
+                    num.innerText = a;
+            });
+
+            minus.addEventListener("click", () => {
+                if(a >= 1){
+                    a--;
+                    num.innerText = a;
+                }
+            });
+     </script>
+     
     <script src="../assets/javascript/ACCeSS-merch.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

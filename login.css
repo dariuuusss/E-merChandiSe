@@ -232,3 +232,18 @@ body{
 .astro-img img{
     display: flex;
 }
+
+.container p{
+    padding: 10px;
+    text-align: center;
+}
+
+.container .error-message{
+    color: red;
+}
+
+.modal-register .notif-message{
+    color: red;
+    text-align: center;
+    padding: 10px;
+}

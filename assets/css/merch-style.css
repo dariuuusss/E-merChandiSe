@@ -155,7 +155,43 @@ header .logo img {
 
 .modal-body {
     background-color: #222;
+    display: inline-block;
 }
+
+.modal-body .quantity-container{
+    margin-top: 10px;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 15px;
+    color: #333;
+}
+
+.modal-body .quantity-container span{
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+}
+
+.modal-body .quantity-container p{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0px 0px 0px
+}
+
+.sizes {
+    margin-top: 10px;
+}
+
+
+/* .modal-body .quantity-container p{
+    padding: 20px;
+} */
 
 .form-control,
 .form-select {
@@ -168,4 +204,15 @@ header .logo img {
 .form-select:focus {
     border-color: #76c7c0;
     background-color: #555;
+}
+
+.modal-body .sizes span{
+    display: inline-block;  
+    padding: 30px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.modal-body .sizes span:hover{
+    color: #333;
 }

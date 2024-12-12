@@ -4,7 +4,6 @@ session_start();  // Start the session
 // Check if the department is set in the session
 if (isset($_SESSION['department'])) {
     $department = $_SESSION['department'];
-    session_unset();
 } else {
     // Handle case where department is not set
     echo json_encode(["error" => "Department not set in session."]);
@@ -34,7 +33,7 @@ try {
     $sales = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     // Return the sales data as JSON
-    echo json_encode($sales);
+    echo json_encode(["department" => $department, "sales" => $sales]);
 
 } catch (PDOException $e) {
     echo json_encode(["error" => "Database connection failed: " . $e->getMessage()]);

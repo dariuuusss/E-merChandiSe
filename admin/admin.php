@@ -15,7 +15,7 @@
     <!-- Header Section -->
     <header class="bg-dark text-white py-3">
         <div class="container d-flex justify-content-between align-items-center">
-            <h1 class="fs-4">Admin Dashboard</h1>
+            <h1 class="fs-4" id="adminTitle">Admin Dashboard</h1>
             <a href="../index.php" class="btn btn-danger" id="logout-btn">Logout</a>
         </div>
     </header>
@@ -52,6 +52,7 @@
     <!-- JavaScript for fetching and displaying data -->
     <script>
         // Fetch data from PHP script using AJAX
+        // Fetch data from PHP script using AJAX
         function fetchData() {
             var xhr = new XMLHttpRequest();
             xhr.open("GET", "fetch&write.php", true);
@@ -60,32 +61,54 @@
                     // Parse the JSON response
                     var data = JSON.parse(xhr.responseText);
 
+                    // Update the title
+                    
+                    var titleElement = document.getElementById('adminTitle');
+
+                    if(data.department == 'all'){
+                        document.title = `Admin Dashboard`;
+                        titleElement.textContent = document.title;
+                        titleElement.style.display = "block";
+                    } else{
+                        document.title = `${data.department} Admin Dashboard`;
+                        titleElement.textContent = document.title;
+                        titleElement.style.display = "block";
+                    }
+                    
+
                     // Get the table body element
                     var tableBody = document.getElementById('data-table').getElementsByTagName('tbody')[0];
                     tableBody.innerHTML = '';  // Clear any existing data
 
                     // Loop through the data and create rows
-                    data.forEach(function(row) {
-                        var tr = document.createElement('tr');
-                        tr.innerHTML = `
-                            <td>${row.order_id}</td>
-                            <td>${row.costumer_name}</td>
-                            <td>${row.item}</td>
-                            <td>${row.size}</td>
-                            <td>${row.quantity}</td>
-                            <a href="edit_order.php?id=${row.order_id}" class="btn btn-warning">Edit</a>
-                            <a href="delete_order.php?id=${row.order_id}" class="btn btn-danger">Delete</a>
-                
-                        `;
-                        tableBody.appendChild(tr);
-                    });
+                    if (data.sales) {
+                        data.sales.forEach(function(row) {
+                            var tr = document.createElement('tr');
+                            tr.innerHTML = `
+                                <td>` + row.order_id + `</td>
+                                <td>` + row.costumer_name + `</td>
+                                <td>` + row.item + `</td>
+                                <td>` + row.size + `</td>
+                                <td>` + row.quantity + `</td>
+                                <td>
+                                    <a href="edit_order.php?id=` + row.order_id + `" class="btn btn-warning">Edit</a>
+                                    <a href="delete_order.php?id=` + row.order_id + `" class="btn btn-danger">Delete</a>
+                                </td>
+                            `;
+                            tableBody.appendChild(tr);
+                        });
+                    } else {
+                        console.log("No sales data found.");
+                    }
                 }
             };
             xhr.send();
         }
 
         // Call fetchData when the page loads
-        window.onload = fetchData;
+        window.addEventListener('load', function() {
+            fetchData();
+        });
     </script>
 </body>
 

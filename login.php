@@ -9,7 +9,7 @@
 <body>
     <!-- <img src="assets/images/Background-logo/astro.png" alt="" width="300px" height="auto"> -->
     <div class="container" id="container">
-        <form action="check.php" method="POST">
+        <form>
             <h1>LogIn</h1>
             <div class="input-box">
                 <label for="username">Username </label>
@@ -26,7 +26,7 @@
             <br>
             <div class="input-box">
                 <p>Don't have an account yet?</p>
-                <button class="register-btn" id="register-log">Create account</button>
+                <button type="button" class="register-btn" id="register-log">Create account</button>
             </div>
         </form>
     </div>
@@ -50,8 +50,9 @@
                 <label for="password-reg">Password</label>
                 <input type="password" id="password-reg" placeholder="Enter your password" required>
             </div>
+            <p class="notif-message"></p>
             <div class="input-box" id="submit">
-                <button class="register" id="register">Register</button>
+                <button type="button" id="register-btn">Register</button>
             </div>
         </form>
     </div>

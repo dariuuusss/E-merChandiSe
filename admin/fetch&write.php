@@ -4,6 +4,7 @@ session_start();  // Start the session
 // Check if the department is set in the session
 if (isset($_SESSION['department'])) {
     $department = $_SESSION['department'];
+    session_unset();
 } else {
     // Handle case where department is not set
     echo json_encode(["error" => "Department not set in session."]);

@@ -13,26 +13,13 @@
             <h1>LogIn</h1>
             <div class="input-box">
                 <label for="username">Username </label>
-                <input type="text" id="username" name="username" placeholder="Enter your username"  value="<?= isset($_POST['username']) ? htmlspecialchars($_POST['username']) : '' ?>" >
+                <input type="text" id="username" name="username" placeholder="Enter your username">
             </div>
             <div class="input-box">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Enter your password">
             </div>
-
-            <?php
-                session_start(); // Start the session
-
-                // Retrieve and display the error message, if it exists, then clear it
-                $error = isset($_SESSION['error']) ? $_SESSION['error'] : ''; 
-                unset($_SESSION['error']); // Clear the error after displaying it
-            ?>
-
-                <!-- Display the error message here if it is set -->
-            <?php if (!empty($error)): ?>
-                <p style="color: red;"><?= htmlspecialchars($error) ?></p>
-            <?php endif; ?>
-
+            <p class="error-message"></p>
             <div class="input-box">
                 <button type="submit" id="login">Login</button>
             </div>
@@ -43,7 +30,7 @@
             </div>
         </form>
     </div>
-    <div class="modal-register">
+    <div class="modal-register" id="register">
         <form action="">
         <div class="close-btn">&times;</div>
         <h1>Register</h1>
@@ -64,7 +51,7 @@
                 <input type="password" id="password-reg" placeholder="Enter your password" required>
             </div>
             <div class="input-box" id="submit">
-                <button class="register">Register</button>
+                <button class="register" id="register">Register</button>
             </div>
         </form>
     </div>

@@ -9,7 +9,6 @@ $dbname = "e-merchandise";
 $username = "root";
 $password = '';
 
-$error = ''; // Initialize error variable
 
 try {
     // Connect to the database
@@ -24,10 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $inputUsername = $_POST['username'];
     $inputPassword = $_POST['password'];
 
-    // Validate inputs
-    if (empty($inputUsername) || empty($inputPassword)) {
-        $error = "Username and password cannot be empty.";
-    } else {
         // Prepare and execute the query
         $stmt = $pdo->prepare("SELECT * FROM credentials WHERE username = :username");
         $stmt->bindParam(':username', $inputUsername, PDO::PARAM_STR);
@@ -36,46 +31,54 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($user && $inputPassword === $user['password']) {
             // Set session variables
-            $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['role'] = $user['role']; // Store role in session
 
+
             if (strpos($user['username'], 'adminCSC') !== false) {
                 $_SESSION['department'] = 'CSC';
+                http_response_code(200);
+                echo json_encode(['message' => 'Login successful', 'isAdmin' => $user['role'] === 'admin']);
             } elseif (strpos($user['username'], 'adminCHESS') !== false) {
                 $_SESSION['department'] = 'CHESS';
+                http_response_code(200);
+                echo json_encode(['message' => 'Login successful', 'isAdmin' => $user['role'] === 'admin']);
             } elseif (strpos($user['username'], 'adminSYMBIO') !== false) {
                 $_SESSION['department'] = 'SYMBIO';
+                http_response_code(200);
+                echo json_encode(['message' => 'Login successful', 'isAdmin' => $user['role'] === 'admin']);
             } elseif (strpos($user['username'], 'adminACCESS') !== false) {
                 $_SESSION['department'] = 'ACCESS';
+                http_response_code(200);
+                echo json_encode(['message' => 'Login successful', 'isAdmin' => $user['role'] === 'admin']);
             } elseif (strpos($user['username'], 'adminCIRCUITS') !== false) {
                 $_SESSION['department'] = 'CIRCUITS';
+                http_response_code(200);
+                echo json_encode(['message' => 'Login successful', 'isAdmin' => $user['role'] === 'admin']);
             } elseif (strpos($user['username'], 'adminSTORM') !== false) {
                 $_SESSION['department'] = 'STORM';
+                http_response_code(200);
+                echo json_encode(['message' => 'Login successful', 'isAdmin' => $user['role'] === 'admin']);
             } else {
                 $_SESSION['department'] = 'all';
+                http_response_code(200);
+                echo json_encode(['message' => 'Login successful', 'isAdmin' => $user['role'] === 'admin']);
             }
-            
-            // Redirect based on user role
-            if ($_SESSION['role'] === 'admin') {
-                // Redirect admin to admin dashboard
-                header("Location: admin/admin.php");
-                exit();
-            } else if ($_SESSION['role'] === 'user') {
-                // Redirect regular user to user dashboard
-                header("Location: index.php");
-                exit();
-            }
-        } else {
-            $error = "Wrong username or password.";
-        }
-    }
 
-    // If there is an error, store it in the session and redirect back to the login page
+
+
+        } else {
+            // Return error response
+            http_response_code(401);
+            echo json_encode(['message' => 'Wrong username or password']);
+        }
+
+    // If there is an error, return error response
     if (!empty($error)) {
-        $_SESSION['error'] = $error; // Store error in session
-        header("Location: login.php");
-        exit();
+        http_response_code(400);
+        echo json_encode(['message' => $error]);
     }
 }
 ?>
+
+

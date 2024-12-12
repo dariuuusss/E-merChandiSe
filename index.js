@@ -1,55 +1,41 @@
 // Admin credentials for each department
-const adminCredentials = {
-    access: { email: "access@admin.com", password: "access123" },
-    csc: { email: "csc@admin.com", password: "csc123" },
-    chess: { email: "chess@admin.com", password: "chess123" },
-    circuits: { email: "circuits@admin.com", password: "circuits123" },
-    symbio: { email: "symbio@admin.com", password: "symbio123" },
-    storm: { email: "storm@admin.com", password: "storm123" },
-    admin: { email: "general@admin.com", password: "general123" }
-};
+document.querySelector("#adminLoginBtn").addEventListener("click", function (e) {
+    e.preventDefault();
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const errorElement = document.querySelector(".error-message");
 
-// Folder paths that match your directory structure
-const folderPaths = {
-    access: "ACCeSS-admin/ACCeSS-admin-page.php",
-    csc: "CSC-admin/CSC-admin-page.php",
-    chess: "Chess-admin/Chess-admin-page.php",
-    circuits: "CircuiTs-admin/CircuiTs-admin-page.php",
-    symbio: "Symbio-admin/Symbio-admin-page.php",
-    storm: "Storm-admin/Storm-admin-page.php",
-    admin: "general-admin/admin.php"
-};
-
-// Admin login button click event
-document.getElementById('adminLoginBtn').addEventListener('click', function () {
-    const email = document.getElementById('adminEmail').value.trim();
-    const password = document.getElementById('adminPassword').value.trim();
-    const errorElement = document.getElementById('adminError');
-
-    errorElement.textContent = '';
-    errorElement.style.display = 'none';
-
-    if (!email || !password) {
-        errorElement.textContent = 'Email and password are required.';
-        errorElement.style.display = 'block';
+    if (username === "" || password === "") {
+        errorElement.textContent = "Username and password cannot be empty.";
+        errorElement.style.display = "block";
         return;
+    } else{
+        fetch("check.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: `username=${username}&password=${password}`,
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            if (data.message === "Login successful") {
+                if (data.isAdmin) {
+                    // Redirect to admin.php
+                    window.location.href = "admin/admin.php";
+                } else {
+                    // Redirect to index.php
+                    errorElement.textContent = "You are not an Admin!";
+                    errorElement.style.display = "block";
+                }
+            } else {
+                // Display error message
+                errorElement.textContent = data.message;
+                errorElement.style.display = "block";
+            }
+        })
+        .catch((error) => console.error(error));
     }
 
-    // Determine which department the credentials belong to
-    let redirectUrl = null;
-    for (const [department, credentials] of Object.entries(adminCredentials)) {
-        if (email === credentials.email && password === credentials.password) {
-            redirectUrl = `admin/${folderPaths[department]}`;
-            break;
-        }
-    }
-
-    if (redirectUrl) {
-        // Redirect to the specific admin page
-        window.location.href = redirectUrl;
-    } else {
-        // Show error message for invalid credentials
-        errorElement.textContent = 'Invalid email or password. Please try again.';
-        errorElement.style.display = 'block';
-    }
+    
 });

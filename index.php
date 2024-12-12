@@ -74,21 +74,21 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="adminLoginForm">
+                    <form id="adminLoginForm" action="check.php" method="POST">
                         <div class="mb-3">
-                            <label for="adminEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="adminEmail" placeholder="Enter your email" required>
+                            <label for="username">Username </label>
+                            <input type="text" id="username" name="username" placeholder="Enter your username">
                         </div>
                         <div class="mb-3">
-                            <label for="adminPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="adminPassword" placeholder="Enter your password" required>
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter your password">
                         </div>
-                        <div id="adminError"></div>
+                        <p class="error-message"></p>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" id="adminLoginBtn">Login</button>
+                        </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="adminLoginBtn">Login</button>
                 </div>
             </div>
         </div>
@@ -150,6 +150,7 @@
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="index.js"></script>
+    
 </body>
 
 </html>

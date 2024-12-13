@@ -258,6 +258,16 @@ footer {
     font-size: 14px;
 }
 
+:host{
+    fill: #fff;
+}
+
+.nav-item.cart a{
+    display: flex;
+    align-items: center;
+    justify-content: centerer;
+}
+
 /* Responsiveness */
 @media (max-width: 992px) {
     .navbar-nav .nav-item .nav-link {

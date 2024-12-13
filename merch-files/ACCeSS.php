@@ -94,6 +94,12 @@
                 <div class="modal-body">
                     <!-- Form for purchase -->
                     <form id="purchaseForm" action="../buy.php" method="post">
+                        <div class="sizes">
+                            <div class="sizes-label">
+                                <p>Sizes</p>
+                            </div>
+                            <span class="size">XS</span><span class="size">&nbsp;S&nbsp;</span><span class="size">&nbsp;M&nbsp;</span><span class="size">&nbsp;L&nbsp;</span><span class="size">XL</span><span class="size">XXL</span>
+                        </div>
                         <div class="quantity-label">
                             <p>Quantity</p>
                         </div>
@@ -102,18 +108,12 @@
                             <span class="quantity" >0</span>
                             <span class="plus" >&#x002B;</span>
                         </div>
-                        <div class="sizes">
-                            <div class="sizes-label">
-                                <p>Sizes</p>
-                            </div>
-                            <span class="size">XS</span><span class="size">S</span><span class="size">M</span><span class="size">L</span><span class="size">XL</span><span class="size">XXL</span>
-                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary" form="purchaseForm">Submit</button>
+                    <button type="submit" class="btn btn-primary" form="purchaseForm">Add</button>
                 </div>
             </div>
         </div>

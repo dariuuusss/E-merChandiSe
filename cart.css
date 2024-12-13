@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    font-family: "Roboto Mono", monospace;
+}
+
+body {
+    background: url('assets/images/Background-logo/Home.png') no-repeat center center fixed;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-color: #f4f4f4;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+
+.navbar {
+    background: transparent;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li:after{
+    /* content: ''; */
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #dfe5e8;
+    transition: transform 0.25s ease-out;
+}
+
+.navbar ul li:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar ul li ::after{
+    transform-origin: bottom left;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.container {
+    padding: 80px 20px 20px 20px;
+}
+.section {
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+.section.active {
+    display: block;
+}
+.section h2 {
+    border: 1px solid #615d5d;
+    background: transparent;
+    opacity: 0.5;
+    color: #000000;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    margin: -20px -20px 20px -20px;
+}
+.section form input, .section form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.section form input[type="submit"] {
+    background: #333;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 4px;
+    /* transition: background 0.3s; */
+}
+.section form input[type="submit"]:hover {
+    background: #555;
+}
+table {
+    border-radius: 5px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table, th, td {
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+th, td {
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    border-radius: 10px;
+    background: transparent;
+    color: #000000;
+}
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+    .navbar ul li {
+        margin: 10px 0;
+    }
+}

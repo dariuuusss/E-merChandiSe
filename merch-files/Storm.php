@@ -64,21 +64,69 @@
         <div class="horizontal-grid-container">
             <!-- Product 1 -->
             <div class="grid-item" data-product-name="Globalized Tshirt" data-product-price="P285">
-                <img src="../assets/images/Storm/Storm-shirt2.jpg" alt="Product 1">
+                <img src="../assets/images/Storm/Storm-bag.jpg" alt="Product 1">
                 <div class="title">Globalized Tshirt</div>
                 <div class="price">P285</div>
             </div>
             <!-- Product 2 -->
             <div class="grid-item" data-product-name="Reversible Lanyard" data-product-price="P159">
-                <img src="../assets/images/Storm/Storm-Lanyard.jpg" alt="Product 2">
+                <img src="../assets/images/Storm/Storm-bag2.jpg" alt="Product 2">
                 <div class="title">Reversible Lanyard</div>
                 <div class="price">P159</div>
             </div>
             <!-- Product 3 -->
             <div class="grid-item" data-product-name="Programmer's Bag" data-product-price="P199">
-                <img src="../assets/images/Storm/Storm-bag.jpg" alt="Product 3">
+                <img src="../assets/images/Storm/Storm-Lanyard.jpg" alt="Product 3">
                 <div class="title">Programmer's Bag</div>
                 <div class="price">P199</div>
+            </div>
+            <!-- Product 1 -->
+            <div class="grid-item" data-product-name="Globalized Tshirt" data-product-price="P285">
+                <img src="../assets/images/Storm/Storm-lanyard2.jpg" alt="Product 1">
+                <div class="title">Globalized Tshirt</div>
+                <div class="price">P285</div>
+            </div>
+            <!-- Product 2 -->
+            <div class="grid-item" data-product-name="Reversible Lanyard" data-product-price="P159">
+                <img src="../assets/images/Storm/Storm-pins.jpg" alt="Product 2">
+                <div class="title">Reversible Lanyard</div>
+                <div class="price">P159</div>
+            </div>
+            <!-- Product 3 -->
+            <div class="grid-item" data-product-name="Programmer's Bag" data-product-price="P199">
+                <img src="../assets/images/Storm/Storm-shirt2.jpg" alt="Product 3">
+                <div class="title">Programmer's Bag</div>
+                <div class="price">P199</div>
+            </div>
+            <!-- Product 1 -->
+            <div class="grid-item" data-product-name="Globalized Tshirt" data-product-price="P285">
+                <img src="../assets/images/Storm/Storm-shirt3.jpg" alt="Product 1">
+                <div class="title">Globalized Tshirt</div>
+                <div class="price">P285</div>
+            </div>
+            <!-- Product 2 -->
+            <div class="grid-item" data-product-name="Reversible Lanyard" data-product-price="P159">
+                <img src="../assets/images/Storm/Storm-shirt4.jpg" alt="Product 2">
+                <div class="title">Reversible Lanyard</div>
+                <div class="price">P159</div>
+            </div>
+            <!-- Product 3 -->
+            <div class="grid-item" data-product-name="Programmer's Bag" data-product-price="P199">
+                <img src="../assets/images/Storm/Storm-shirt5.jpg" alt="Product 3">
+                <div class="title">Programmer's Bag</div>
+                <div class="price">P199</div>
+            </div>
+            <!-- Product 1 -->
+            <div class="grid-item" data-product-name="Globalized Tshirt" data-product-price="P285">
+                <img src="../assets/images/Storm/Storm-sticker1.jpg" alt="Product 1">
+                <div class="title">Globalized Tshirt</div>
+                <div class="price">P285</div>
+            </div>
+            <!-- Product 2 -->
+            <div class="grid-item" data-product-name="Reversible Lanyard" data-product-price="P159">
+                <img src="../assets/images/Storm/Storm-sticker2.jpg" alt="Product 2">
+                <div class="title">Reversible Lanyard</div>
+                <div class="price">P159</div>
             </div>
         </div>
     </section>
@@ -88,36 +136,48 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="purchaseModalLabel">Purchase Product</h5>
+                    <h5 class="modal-title" id="purchaseModalLabel">Purch   ase Product</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <!-- Form for purchase -->
-                    <form id="purchaseForm" action="../buy.php" method="post">
-                        <div class="sizes">
-                            <div class="sizes-label">
-                                <p>Sizes</p>
-                            </div>
-                            <span class="size">XS</span><span class="size">&nbsp;S&nbsp;</span><span class="size">&nbsp;M&nbsp;</span><span class="size">&nbsp;L&nbsp;</span><span class="size">XL</span><span class="size">XXL</span>
-                        </div>
+                    <form id="purchaseForm" action="buy.php" method="post">
+                        <input type="hidden" name="productName" id="productName" value="">
+                        <input type="hidden" name="productSize" id="productSize" value=""> <!-- Hidden input for size -->
+                        <input type="hidden" name="quantity" id="itemQuantityDisplay" value="0"> <!-- Hidden input for quantity -->
                         <div class="quantity-label">
                             <p>Quantity</p>
                         </div>
                         <div class="quantity-container">
                             <span class="minus" >&#x2212;</span>
-                            <span class="quantity" >0</span>
+                            <span class="quantity" id="itemQuantity">0</span>
                             <span class="plus" >&#x002B;</span>
+                        </div>
+                        <div class="sizes">
+                            <div class="sizes-label">
+                                <p>Sizes</p>
+                            </div>
+                            <span class="size" onclick="setSize('XS')">XS</span>
+                            <span class="size" onclick="setSize('S')">S</span>
+                            <span class="size" onclick="setSize('M')">M</span>
+                            <span class="size" onclick="setSize('L')">L</span>
+                            <span class="size" onclick="setSize('XL')">XL</span>
+                            <span class="size" onclick="setSize('XXL')">XXL</span>
+                        </div>
+                        <div id="selectedSizeDisplay">Selected Size: None</div>
+                        
+                        <div class="modal-footer">
+                        <div class="error-message" style="display: none;"></div>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <!-- Submit button -->
+                            <button type="submit" class="btn btn-primary" form="purchaseForm">Add</button>
                         </div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary" form="purchaseForm">Add</button>
+                    
                 </div>
             </div>
         </div>
-    </div>
 
     <!-- JS -->
     <script src="../assets/javascript/ACCeSS-merch.js"></script>

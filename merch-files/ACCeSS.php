@@ -95,8 +95,8 @@
                     <!-- Form for purchase -->
                     <form id="purchaseForm" action="buy.php" method="post">
                         <input type="hidden" name="productName" id="productName" value="">
-                        <input type="hidden" name="size" id="productSize" value=""> <!-- Hidden input for size -->
-                        <input type="hidden" name="quantity" id="itemQuantity" value="0"> <!-- Hidden input for quantity -->
+                        <input type="hidden" name="productSize" id="productSize" value=""> <!-- Hidden input for size -->
+                        <input type="hidden" name="quantity" id="itemQuantityDisplay" value="0"> <!-- Hidden input for quantity -->
                         <div class="quantity-label">
                             <p>Quantity</p>
                         </div>
@@ -116,11 +116,11 @@
                             <span class="size" onclick="setSize('XL')">XL</span>
                             <span class="size" onclick="setSize('XXL')">XXL</span>
                         </div>
-                    
+                        <div id="selectedSizeDisplay">Selected Size: None</div>
                         
                         <div class="modal-footer">
                         <div class="error-message" style="display: none;"></div>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <!-- Submit button -->
                             <button type="submit" class="btn btn-primary" form="purchaseForm">Add</button>
                         </div>

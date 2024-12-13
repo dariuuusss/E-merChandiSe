@@ -97,6 +97,12 @@
                         <input type="hidden" name="productName" id="productName" value="">
                         <input type="hidden" name="size" id="productSize" value=""> <!-- Hidden input for size -->
                         <input type="hidden" name="quantity" id="itemQuantity" value="0"> <!-- Hidden input for quantity -->
+                        <div class="sizes">
+                            <div class="sizes-label">
+                                <p>Sizes</p>
+                            </div>
+                            <span class="size">XS</span><span class="size">&nbsp;S&nbsp;</span><span class="size">&nbsp;M&nbsp;</span><span class="size">&nbsp;L&nbsp;</span><span class="size">XL</span><span class="size">XXL</span>
+                        </div>
                         <div class="quantity-label">
                             <p>Quantity</p>
                         </div>
@@ -125,6 +131,11 @@
                             <button type="submit" class="btn btn-primary" form="purchaseForm">Submit</button>
                         </div>
                     </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary" form="purchaseForm">Add</button>
                 </div>
             </div>
         </div>

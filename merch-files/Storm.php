@@ -92,38 +92,35 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="purchaseForm">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    <!-- Form for purchase -->
+                    <form id="purchaseForm" action="../buy.php" method="post">
+                        <div class="sizes">
+                            <div class="sizes-label">
+                                <p>Sizes</p>
+                            </div>
+                            <span class="size">XS</span><span class="size">&nbsp;S&nbsp;</span><span class="size">&nbsp;M&nbsp;</span><span class="size">&nbsp;L&nbsp;</span><span class="size">XL</span><span class="size">XXL</span>
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        <div class="quantity-label">
+                            <p>Quantity</p>
                         </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="paymentMethod" class="form-label">Payment Method</label>
-                            <select class="form-select" id="paymentMethod" required>
-                                <option value="gcash">GCash</option>
-                                <option value="cash">Cash</option>
-                            </select>
+                        <div class="quantity-container">
+                            <span class="minus" >&#x2212;</span>
+                            <span class="quantity" >0</span>
+                            <span class="plus" >&#x002B;</span>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary" form="purchaseForm">Submit</button>
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary" form="purchaseForm">Add</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- JS -->
-    <script src="ACCeSS-merch.js"></script>
+    <script src="../assets/javascript/ACCeSS-merch.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

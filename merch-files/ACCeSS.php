@@ -93,51 +93,43 @@
                 </div>
                 <div class="modal-body">
                     <!-- Form for purchase -->
-                    <form id="purchaseForm" action="../buy.php" method="post">
+                    <form id="purchaseForm" action="buy.php" method="post">
+                        <input type="hidden" name="productName" id="productName" value="">
+                        <input type="hidden" name="size" id="productSize" value=""> <!-- Hidden input for size -->
+                        <input type="hidden" name="quantity" id="itemQuantity" value="0"> <!-- Hidden input for quantity -->
                         <div class="quantity-label">
                             <p>Quantity</p>
                         </div>
                         <div class="quantity-container">
                             <span class="minus" >&#x2212;</span>
-                            <span class="quantity" >0</span>
+                            <span class="quantity" id="itemQuantity">0</span>
                             <span class="plus" >&#x002B;</span>
                         </div>
                         <div class="sizes">
                             <div class="sizes-label">
                                 <p>Sizes</p>
                             </div>
-                            <span class="size">XS</span><span class="size">S</span><span class="size">M</span><span class="size">L</span><span class="size">XL</span><span class="size">XXL</span>
+                            <span class="size" onclick="setSize('XS')">XS</span>
+                            <span class="size" onclick="setSize('S')">S</span>
+                            <span class="size" onclick="setSize('M')">M</span>
+                            <span class="size" onclick="setSize('L')">L</span>
+                            <span class="size" onclick="setSize('XL')">XL</span>
+                            <span class="size" onclick="setSize('XXL')">XXL</span>
+                        </div>
+                    
+                        
+                        <div class="modal-footer">
+                        <div class="error-message" style="display: none;"></div>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-primary" form="purchaseForm">Submit</button>
                         </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary" form="purchaseForm">Submit</button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- JS -->
-     <script>
-        const plus = document.querySelector(".plus"),
-            minus = document.querySelector(".minus"),
-            num = document.querySelector(".quantity");
 
-            let a = 0;
-
-            plus.addEventListener("click", () => {
-                    a++;
-                    num.innerText = a;
-            });
-
-            minus.addEventListener("click", () => {
-                if(a >= 1){
-                    a--;
-                    num.innerText = a;
-                }
-            });
-     </script>
      
     <script src="../assets/javascript/ACCeSS-merch.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

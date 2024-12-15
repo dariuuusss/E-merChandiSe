@@ -75,16 +75,16 @@
                 <div class="price">P249</div>
             </div>
             <!-- Product 3 -->
-            <div class="grid-item" data-product-name="Circuits Lanyard" data-product-price="P159">
+            <div class="grid-item" data-product-name="Circuits Lanyard" data-product-price="P129">
                 <img src="../assets/images/CircuITs/Circuits-lanyard.jpg" alt="Product 3">
                 <div class="title">Circuits Lanyard</div>
-                <div class="price">P159</div>
+                <div class="price">P129</div>
             </div>
             <!-- Product 4 -->
-            <div class="grid-item" data-product-name="Programmer's Bag" data-product-price="P199">
+            <div class="grid-item" data-product-name="Programmer's Bag" data-product-price="P150">
                 <img src="../assets/images/CircuITs/Circuits-bag.jpg" alt="Product 4">
                 <div class="title">Programmer's Bag</div>
-                <div class="price">P199</div>
+                <div class="price">P150</div>
             </div>
             <!-- Product 5 -->
             <div class="grid-item" data-product-name="Circuits Bracelet" data-product-price="P100">
@@ -96,19 +96,19 @@
             <div class="grid-item" data-product-name="Circuits Pin" data-product-price="P20">
                 <img src="../assets/images/CircuITs/Circuits-pin.jpg" alt="Product 6">
                 <div class="title">Circuits Pin</div>
-                <div class="price">P100</div>
+                <div class="price">P20</div>
             </div>
             <!-- Product 7 -->
             <div class="grid-item" data-product-name="Circuits Bracelet" data-product-price="P20">
                 <img src="../assets/images/CircuITs/Circuits-pin2.jpg" alt="Product 7">
                 <div class="title">Circuits Pin II</div>
-                <div class="price">P100</div>
+                <div class="price">P20</div>
             </div>
             <!-- Product 8 -->
-            <div class="grid-item" data-product-name="Circuits Sticker" data-product-price="P100">
+            <div class="grid-item" data-product-name="Circuits Sticker" data-product-price="P10">
                 <img src="../assets/images/CircuITs/Circuits-stickers.jpg" alt="Product 8">
                 <div class="title">Circuits Sticker</div>
-                <div class="price">P100</div>
+                <div class="price">P10</div>
             </div>
             </div>
         </div>

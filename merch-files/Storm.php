@@ -63,70 +63,70 @@
     <section class="my-5">
         <div class="horizontal-grid-container">
             <!-- Product 1 -->
-            <div class="grid-item" data-product-name="Globalized Tshirt" data-product-price="P285">
+            <div class="grid-item" data-product-name="Storm Bag" data-product-price="P229">
                 <img src="../assets/images/Storm/Storm-bag.jpg" alt="Product 1">
-                <div class="title">Globalized Tshirt</div>
-                <div class="price">P285</div>
+                <div class="title">Storm Bag</div>
+                <div class="price">P229</div>
             </div>
             <!-- Product 2 -->
-            <div class="grid-item" data-product-name="Reversible Lanyard" data-product-price="P159">
+            <div class="grid-item" data-product-name="Storm Bag II" data-product-price="229">
                 <img src="../assets/images/Storm/Storm-bag2.jpg" alt="Product 2">
-                <div class="title">Reversible Lanyard</div>
-                <div class="price">P159</div>
+                <div class="title">Storm Bag II</div>
+                <div class="price">P229</div>
             </div>
             <!-- Product 3 -->
-            <div class="grid-item" data-product-name="Programmer's Bag" data-product-price="P199">
+            <div class="grid-item" data-product-name="Storm Lanyard" data-product-price="P179">
                 <img src="../assets/images/Storm/Storm-Lanyard.jpg" alt="Product 3">
-                <div class="title">Programmer's Bag</div>
-                <div class="price">P199</div>
+                <div class="title">Storm Lanyard</div>
+                <div class="price">P179</div>
             </div>
-            <!-- Product 1 -->
-            <div class="grid-item" data-product-name="Globalized Tshirt" data-product-price="P285">
-                <img src="../assets/images/Storm/Storm-lanyard2.jpg" alt="Product 1">
-                <div class="title">Globalized Tshirt</div>
-                <div class="price">P285</div>
+            <!-- Product 4 -->
+            <div class="grid-item" data-product-name="Storm Lanyard II" data-product-price="P179">
+                <img src="../assets/images/Storm/Storm-lanyard2.jpg" alt="Product 4">
+                <div class="title">Storm Lanyard II</div>
+                <div class="price">P179</div>
             </div>
-            <!-- Product 2 -->
-            <div class="grid-item" data-product-name="Reversible Lanyard" data-product-price="P159">
-                <img src="../assets/images/Storm/Storm-pins.jpg" alt="Product 2">
-                <div class="title">Reversible Lanyard</div>
-                <div class="price">P159</div>
+            <!-- Product 5 -->
+            <div class="grid-item" data-product-name="Storm Pins" data-product-price="P29">
+                <img src="../assets/images/Storm/Storm-pins.jpg" alt="Product 5">
+                <div class="title">Storm Pins</div>
+                <div class="price">P29</div>
             </div>
-            <!-- Product 3 -->
-            <div class="grid-item" data-product-name="Programmer's Bag" data-product-price="P199">
-                <img src="../assets/images/Storm/Storm-shirt2.jpg" alt="Product 3">
-                <div class="title">Programmer's Bag</div>
-                <div class="price">P199</div>
+            <!-- Product 6 -->
+            <div class="grid-item" data-product-name="Storm Shirt II" data-product-price="P289">
+                <img src="../assets/images/Storm/Storm-shirt2.jpg" alt="Product 6">
+                <div class="title">Storm Shirt II</div>
+                <div class="price">P289</div>
             </div>
-            <!-- Product 1 -->
-            <div class="grid-item" data-product-name="Globalized Tshirt" data-product-price="P285">
-                <img src="../assets/images/Storm/Storm-shirt3.jpg" alt="Product 1">
-                <div class="title">Globalized Tshirt</div>
-                <div class="price">P285</div>
+            <!-- Product 7 -->
+            <div class="grid-item" data-product-name="Storm Shirt III" data-product-price="P289">
+                <img src="../assets/images/Storm/Storm-shirt3.jpg" alt="Product 7">
+                <div class="title">Storm Shirt III</div>
+                <div class="price">P289</div>
             </div>
-            <!-- Product 2 -->
-            <div class="grid-item" data-product-name="Reversible Lanyard" data-product-price="P159">
-                <img src="../assets/images/Storm/Storm-shirt4.jpg" alt="Product 2">
-                <div class="title">Reversible Lanyard</div>
-                <div class="price">P159</div>
+            <!-- Product 8 -->
+            <div class="grid-item" data-product-name="Storm Shirt IV" data-product-price="P289">
+                <img src="../assets/images/Storm/Storm-shirt4.jpg" alt="Product 8">
+                <div class="title">Storm Shirt IV</div>
+                <div class="price">P289</div>
             </div>
-            <!-- Product 3 -->
-            <div class="grid-item" data-product-name="Programmer's Bag" data-product-price="P199">
-                <img src="../assets/images/Storm/Storm-shirt5.jpg" alt="Product 3">
-                <div class="title">Programmer's Bag</div>
-                <div class="price">P199</div>
+            <!-- Product 9 -->
+            <div class="grid-item" data-product-name="Storm Shirt V" data-product-price="P289">
+                <img src="../assets/images/Storm/Storm-shirt5.jpg" alt="Product 9">
+                <div class="title">Storm Shirt V</div>
+                <div class="price">289</div>
             </div>
-            <!-- Product 1 -->
-            <div class="grid-item" data-product-name="Globalized Tshirt" data-product-price="P285">
-                <img src="../assets/images/Storm/Storm-sticker1.jpg" alt="Product 1">
-                <div class="title">Globalized Tshirt</div>
-                <div class="price">P285</div>
+            <!-- Product 10 -->
+            <div class="grid-item" data-product-name="Storm Sticker" data-product-price="P25">
+                <img src="../assets/images/Storm/Storm-sticker1.jpg" alt="Product 10">
+                <div class="title">Storm Sticker</div>
+                <div class="price">P25</div>
             </div>
-            <!-- Product 2 -->
-            <div class="grid-item" data-product-name="Reversible Lanyard" data-product-price="P159">
-                <img src="../assets/images/Storm/Storm-sticker2.jpg" alt="Product 2">
-                <div class="title">Reversible Lanyard</div>
-                <div class="price">P159</div>
+            <!-- Product 11 -->
+            <div class="grid-item" data-product-name="Storm Sticker IIs" data-product-price="P25">
+                <img src="../assets/images/Storm/Storm-sticker2.jpg" alt="Product 11">
+                <div class="title">Storm Sticker II</div>
+                <div class="price">P25</div>
             </div>
         </div>
     </section>

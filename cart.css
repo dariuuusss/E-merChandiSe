@@ -131,3 +131,184 @@ th {
         margin: 10px 0;
     }
 }
+
+       /* Navbar Styling */
+       .navbar {
+        background-color: transparent;
+        padding: 10px 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid white;
+        box-shadow: 
+        box-shadow: 5px 10px #888888;
+    }
+
+    .navbar ul {
+        display: flex;
+        list-style: none;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .navbar li {
+        position: relative;
+    }
+
+    .navbar a {
+        color:rgb(255, 255, 255);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        display: inline-block;
+        padding: 5px 0;
+        transition: color 0.3s ease;
+    }
+
+    .navbar a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color:rgb(255, 255, 255);
+        transition: width 0.3s ease-in-out;
+    }
+
+    .navbar a:hover {
+        color:rgb(93, 96, 101);
+    }
+
+    .navbar a:hover::after {
+        width: 100%;
+    }
+
+    /* Container */
+    .container {
+        margin: 20px auto;
+        padding: 20px;
+        background: transparent;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    h2 {
+        color:rgb(0, 0, 0);
+        margin-bottom: 15px;
+    }
+
+    /* Table Styling */
+    /* General table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: transparent; /* Fully transparent background */
+    color: #e6e6e6; /* Soft white for text */
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    overflow: hidden; /* Prevent overflow issues */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4); /* Elegant shadow */
+}
+
+/* Header styling */
+table thead {
+    background: rgba(25, 25, 25, 0.8); /* Transparent dark header */
+    text-transform: uppercase; /* All caps for headers */
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    border: none; /* Remove radius completely */
+}
+
+table th {
+    padding: 15px 20px;
+    color: #ffffff; /* Bright white text */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+    text-align: left;
+}
+
+/* Body styling */
+table tbody tr {
+    transition: all 0.3s ease; /* Smooth animations */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05); /* Light transparent row */
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.1); /* Slightly darker transparent */
+}
+
+table tbody td {
+    padding: 12px 20px; /* Clean padding for cells */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle line divider */
+    text-align: left;
+    vertical-align: middle; /* Align content nicely */
+}
+
+/* Hover effect */
+table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.15); /* Highlighted row */
+    transform: scale(1.02); /* Slight zoom-in effect */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); /* Glow effect */
+    cursor: pointer;
+}
+
+/* Add a small transition effect for all changes */
+table tbody tr,
+table th,
+table td {
+    transition: all 0.3s ease;
+}
+
+
+    /* Back Button */
+    .back-button {
+        display: inline-block;
+        margin-bottom: 20px;
+        background-color:rgb(255, 255, 255);
+        color: black;
+        padding: 8px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+        background-color:rgb(112, 112, 112);
+        color: #fff;
+    }
+
+    /* Section Visibility */
+    .section {
+        display: none;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .section.active {
+        display: block;
+    }
+
+    /* Fade In Animation */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive Behavior */
+    @media (max-width: 768px) {
+        .navbar ul {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }

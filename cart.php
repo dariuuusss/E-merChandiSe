@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="cart.css">
+    <link href="cart.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation Bar -->
     <div class="navbar">
         <ul>
             <li><a onclick="showSection('orders')">Orders</a></li>
@@ -15,7 +16,13 @@
             <li><a onclick="showSection('completed')">Completed</a></li>
         </ul>
     </div>
+
+    <!-- Main Content -->
     <div class="container">
+        <!-- Back Button -->
+        <a href="javascript:history.back()" class="back-button">← Back</a>
+
+        <!-- Orders Section -->
         <div id="orders" class="section active">
             <h2>Orders</h2>
             <table>
@@ -30,10 +37,12 @@
                     </tr>
                 </thead>
                 <tbody id="orders-body">
-
+                    <!-- Orders will be populated here -->
                 </tbody>
             </table>
         </div>
+
+        <!-- Pending Section -->
         <div id="pending" class="section">
             <h2>Pending</h2>
             <table>
@@ -48,10 +57,12 @@
                     </tr>
                 </thead>
                 <tbody id="pending-body">
-                    <!-- Pending orders will go here -->
+                    <!-- Pending orders will be populated here -->
                 </tbody>
             </table>
         </div>
+
+        <!-- Completed Section -->
         <div id="completed" class="section">
             <h2>Completed</h2>
             <table>
@@ -66,11 +77,12 @@
                     </tr>
                 </thead>
                 <tbody id="completed-body">
-                    <!-- Completed orders will go here -->
+                    <!-- Completed orders will be populated here -->
                 </tbody>
             </table>
         </div>
     </div>
+
     <script>
         // Function to fetch data from fetch_orders.php
         function fetchData() {
@@ -105,6 +117,7 @@
         // Fetch data when the page loads
         window.onload = fetchData;
 
+        // Function to toggle sections
         function showSection(sectionId) {
             const sections = document.querySelectorAll('.section');
             sections.forEach(section => {

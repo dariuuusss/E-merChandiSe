@@ -15,6 +15,7 @@
     <header class="transparent-header text-white py-3">
         <div class="container d-flex align-items-center">
             <div class="d-flex align-items-center">
+            <a href="javascript:history.back()" class="back-button">← Back</a>
                 <div class="logo me-3">
                     <img src="../assets/images/background-logo/astro.png" alt="College of Science Logo" height="40">
                 </div>
@@ -53,6 +54,9 @@
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#adminModal">Admin</a>
+                    </li>
+                    <li class="nav-item cart">
+                        <li><a href="cart.php"><ion-icon name="cart-outline"></ion-icon></a></li>
                     </li>
                 </ul>
             </nav>
@@ -168,6 +172,8 @@
         </div>
 
     <!-- JS -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="../assets/javascript/ACCeSS-merch.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

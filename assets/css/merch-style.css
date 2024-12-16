@@ -43,19 +43,17 @@ header .logo img {
     color: #76c7c0;
 }
 .horizontal-grid-container {
-    display: grid; /* Arrange items horizontally */
-    gap: 10px;
-    padding: 20px;
+    display: grid; /* Arrange items in a grid layout */
+    gap: 10px; /* Minimal, even gap between items */
+    padding: 10px; /* Minimal padding inside the container */
     overflow-x: auto; /* Enable horizontal scrolling */
-    max-width: 100%; /* Ensure it doesn't overflow */
-    scroll-snap-type: x mandatory;
-
-    /* Center the container */
-    /* justify-content: center; */
-    align-items: center;
-    /* height: 100vh; */
-    margin: 0; 
-    grid-template-columns: repeat(auto-fit, 300px);
+    max-width: 100%; /* Ensure the container respects the viewport width */
+    scroll-snap-type: x mandatory; /* Snap items while scrolling horizontally */
+    align-items: center; /* Align items vertically in the container */
+    /* grid-auto-flow: column; */
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); /* Define flexible item sizes */
+    /* scrollbar-width: thin; */
 }
 
 .grid-item {
@@ -74,6 +72,7 @@ header .logo img {
     align-items: center;
     /* justify-content: space-between; */
     padding: 15px;
+    
 }
 
 .grid-item:hover {
@@ -90,7 +89,7 @@ header .logo img {
 .grid-item img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 10px;
+    margin: 0;
     display: block;
 }
 
@@ -222,4 +221,68 @@ header .logo img {
 
 .modal-body .sizes .size:hover{
     color: #171717;
+}
+
+.nav-item.cart {
+    position: relative;
+    display: inline-block;
+}
+
+/* Styling the anchor link */
+.nav-item.cart a {
+    text-decoration: none;
+    color: #333; /* Default color for the icon */
+    font-size: 1.5rem; /* Adjust icon size */
+    transition: color 0.3s ease;
+}
+
+/* Change color on hover */
+.nav-item.cart a:hover {
+    color: #ff6600; /* Accent color for hover */
+}
+
+/* Add a notification badge for the cart */
+.nav-item.cart::after {
+    content: attr(data-cart-count); /* Add the cart count dynamically */
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #ff6600; /* Badge background color */
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 6px;
+    display: inline-block;
+    min-width: 18px;
+    text-align: center;
+    line-height: 1;
+    visibility: hidden; /* Hide if no count is provided */
+    opacity: 0;
+    transform: scale(0.8);
+    transition: visibility 0s, opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show badge if data-cart-count exists */
+.nav-item.cart[data-cart-count]:not([data-cart-count="0"])::after {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    background-color:rgb(255, 255, 255);
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color:rgb(112, 112, 112);
+    color: #fff;
 }

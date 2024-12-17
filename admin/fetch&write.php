@@ -22,10 +22,10 @@ try {
 
     // If the user is an admin, show all data (regardless of department)
     if ($department === 'all') {
-        $stmt = $pdo->prepare("SELECT order_id, costumer_name, item, size, quantity FROM sales");
+        $stmt = $pdo->prepare("SELECT order_id, costumer_name, item, size, quantity, date FROM sales");
     } else {
         // If the user is not an admin, filter by their department
-        $stmt = $pdo->prepare("SELECT order_id, costumer_name, item, size, quantity FROM sales WHERE department = :department");
+        $stmt = $pdo->prepare("SELECT order_id, costumer_name, item, size, quantity, date FROM sales WHERE department = :department");
         $stmt->bindParam(':department', $department, PDO::PARAM_STR);
     }
 

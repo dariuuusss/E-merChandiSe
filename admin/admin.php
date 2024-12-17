@@ -35,7 +35,7 @@
                         <th>Item</th>
                         <th>Size</th>
                         <th>Quantity</th>
-                        <th>Actions</th>
+                        <th>Date</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -90,10 +90,7 @@
                                 <td>` + row.item + `</td>
                                 <td>` + row.size + `</td>
                                 <td>` + row.quantity + `</td>
-                                <td>
-                                    <a href="edit_order.php?id=` + row.order_id + `" class="btn btn-warning">Edit</a>
-                                    <a href="delete_order.php?id=` + row.order_id + `" class="btn btn-danger">Delete</a>
-                                </td>
+                                <td>` + row.date + `</td>
                             `;
                             tableBody.appendChild(tr);
                         });
